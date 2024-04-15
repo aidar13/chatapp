@@ -1,5 +1,6 @@
 services:
-    laravel.test:
+    chatapp-server:
+        container_name: chatapp-server
         build:
             context: ./vendor/laravel/sail/runtimes/8.3
             dockerfile: Dockerfile
@@ -22,8 +23,10 @@ services:
         networks:
             - sail
         depends_on:
-            - mysql
-    mysql:
+            - chatapp-mysql
+
+    chatapp-mysql:
+        container_name: chatapp-mysql
         image: 'mysql/mysql-server:8.0'
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
@@ -47,9 +50,11 @@ services:
                 - '-p${DB_PASSWORD}'
             retries: 3
             timeout: 5s
+
 networks:
     sail:
         driver: bridge
+
 volumes:
     sail-mysql:
         driver: local
