@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -15,6 +16,8 @@ use Laravel\Sanctum\HasApiTokens;
  * @property string $last_name
  * @property string $first_name
  * @property string $password
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  */
 final class User extends Authenticatable
 {
