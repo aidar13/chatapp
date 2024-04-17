@@ -12,13 +12,13 @@ final class SendMessageDTO
     use ToArrayTrait;
 
     public int    $chatId;
-    public string $message;
+    public string $text;
 
     public static function fromRequest(SendMessageRequest $request): self
     {
-        $self          = new self();
-        $self->chatId  = (int)$request->get('chatId');
-        $self->message = $request->get('message');
+        $self         = new self();
+        $self->chatId = (int)$request->get('chatId');
+        $self->text   = $request->get('text');
 
         return $self;
     }

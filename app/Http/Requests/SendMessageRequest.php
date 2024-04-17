@@ -19,8 +19,8 @@ class SendMessageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'chatId'  => ['required', 'integer', 'exists:chats,id'],
-            'message' => ['required', 'string'],
+            'chatId' => ['required', 'integer', 'exists:chats,id'],
+            'text'   => ['required', 'string'],
         ];
     }
 

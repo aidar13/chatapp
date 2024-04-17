@@ -23,7 +23,7 @@ final readonly class SendMessageHandler
 
         $message          = new Message();
         $message->chat_id = $chat->id;
-        $message->message = $command->DTO->message;
+        $message->text    = $command->DTO->text;
         $this->repository->create($message);
     }
 }

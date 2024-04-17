@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * @property int $id
  * @property int $chat_id
- * @property string $message
+ * @property string $text
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * @property Carbon $deleted_at
