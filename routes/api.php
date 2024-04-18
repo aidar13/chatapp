@@ -28,7 +28,7 @@ Route::middleware('throttle:10,1')->group(function () {
         Route::post('/chats', [ChatController::class, 'store'])
             ->name('v1.chats.store');
 
-        Route::post('/chats/{id}/message', [ChatController::class, 'sendMessage'])
+        Route::post('/chats/message', [ChatController::class, 'sendMessage'])
             ->name('v1.chats.send-message');
     });
 });
