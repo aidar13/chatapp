@@ -23,7 +23,7 @@ final class UserController extends Controller
     ) {
     }
 
-    public function me(Request $request): UserResource
+    public function profile(Request $request): UserResource
     {
         return new UserResource($request->user());
     }

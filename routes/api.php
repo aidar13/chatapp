@@ -15,8 +15,8 @@ Route::middleware('throttle:10,1')->group(function () {
 
     Route::middleware('auth:sanctum')->group(function () {
         //User
-        Route::get('/me', [UserController::class, 'me'])
-            ->name('v1.users.me');
+        Route::get('/profile', [UserController::class, 'profile'])
+            ->name('v1.profile');
 
         Route::get('/users', [UserController::class, 'index'])
             ->name('v1.users.index');
