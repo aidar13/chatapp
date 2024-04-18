@@ -10,7 +10,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'User registration'
       description: ''
       authenticated: false
       custom: []
@@ -42,7 +42,7 @@ endpoints:
         custom: []
       lastName:
         name: lastName
-        description: ''
+        description: 'Last name of user'
         required: true
         example: quae
         type: string
@@ -51,7 +51,7 @@ endpoints:
         custom: []
       firstName:
         name: firstName
-        description: ''
+        description: 'First name of user'
         required: true
         example: similique
         type: string
@@ -80,8 +80,8 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Get token'
+      description: 'API for get token'
       authenticated: false
       custom: []
     headers:
@@ -130,7 +130,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get current user data'
       description: ''
       authenticated: false
       custom: []
